@@ -27,6 +27,7 @@ git add --all
 
 ## Committing the changes
 git commit -m "SOLVE-R-US-0001 - Adding the basic functionality for the backend"
+git commit -m "SOLVE-R-US-0001 - Changing the structure of the project"
 
 ## Pushing the changes to the remote repository
 git push
