@@ -31,8 +31,8 @@ The Data Manipulation Language (DML) statements are found in the solve-r-us\data
 
 ## Endpoints
 ### Customer
-http://localhost:8080/getAllCustomers
+http://localhost:8080/customers
 
 ### Track
-http://localhost:8080/getAllTracks
+http://localhost:8080/tracks
 
