@@ -7,7 +7,7 @@ const Tracks = () => {
     const [tracks, setTracks] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/tracks`).then(result => {
+        axios.get(`http://localhost:8080/tracks`).then(result => {
             setTracks(result.data);
         });
     }, []);

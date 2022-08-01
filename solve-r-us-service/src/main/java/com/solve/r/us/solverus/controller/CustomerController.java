@@ -10,12 +10,13 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/customers")
+@CrossOrigin(origins = {"http://localhost:3000","http://localhost:4200"})
 public class CustomerController {
 
 	@Autowired
 	CustomerService customerService;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "", method = RequestMethod.GET, headers = "Accept=application/json")
 	public @ResponseBody Iterable<Customer> getAllCustomers() {
 		Iterable<Customer> listOfCustomers = customerService.getAllCustomers();
 		return listOfCustomers;

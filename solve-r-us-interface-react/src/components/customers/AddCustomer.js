@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Row, Col, Typography, Input, Form, Button,
 Radio, Switch, Slider, Select, message} from 'antd';
 import axios from 'axios';
-import {useHistory, useNavigate} from 'react-router';
+import {useNavigate} from 'react-router';
 const {Title} = Typography;
 const layout = {
   labelCol: { span: 8 },
@@ -15,7 +15,7 @@ const AddCustomer = () => {
 
   const handleSubmit = (values) => {
     setLoading(true);
-    axios.post(`http://localhost:5000/customers`,
+    axios.post(`http://localhost:8080/customers`,
       values
     )
     .then(res => {

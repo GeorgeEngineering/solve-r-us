@@ -10,12 +10,13 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/tracks")
+@CrossOrigin(origins = {"http://localhost:3000","http://localhost:4200"})
 public class TrackController {
 
 	@Autowired
 	TrackService trackService;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "", method = RequestMethod.GET, headers = "Accept=application/json")
 	public @ResponseBody Iterable<Track> getAllPlaylistTracks() {
 
 		Iterable<Track> listOfTracks = trackService.getAllTracks();
